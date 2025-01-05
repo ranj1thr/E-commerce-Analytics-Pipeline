@@ -100,7 +100,15 @@ This project streamlines the process of analyzing sales data by integrating data
 
 ## Dashboard Overview
 
-### Sample Dashboard
+### 1. Overview of Sales Performance
+![Sales Overview](dashboards/Overview.png)
+
+### 2. Brand Performance
+![Brand Performance](dashboards/brand.png)
+
+### 3. Top SKUs by Units Sold
+![Top SKUs](dashboards/topskus.png)
+
 
 #### Key Visualizations:
 
