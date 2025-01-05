@@ -33,3 +33,41 @@ E-commerce-Analytics-Pipeline/
 ├── .gitignore              # Git ignore file
 ├── LICENSE                 # License for the repository
 ├── README.md               # Project documentation
+
+
+## Workflow
+
+### 1. Data Upload and Processing
+**Input Data:** Sales data from Amazon and Flipkart in `.csv` or `.xlsx` formats.
+
+**ETL Process:**
+- The `upload_to_postgres.py` script automates:
+  - Uploading sales data to PostgreSQL.
+  - Deduplication of records using a hash-based `unique_id`.
+  - Dynamic creation or updating of tables in PostgreSQL.
+
+---
+
+### 2. Data Transformation
+- The SQL query in `combined_data_query.sql` performs:
+  - Combining Amazon and Flipkart sales data into a single unified dataset.
+  - Standardizing columns like `brand`, `SKU`, and `GMV`.
+  - Enriching data by joining with additional pricing and product tables.
+
+---
+
+### 3. Data Visualization
+**Metabase Dashboards:**
+- Provides actionable insights on sales performance, brand contributions, and top-performing SKUs.
+- Enables dynamic filtering by date, platform, and fulfillment channels.
+
+---
+
+## How to Use
+
+### Prerequisites
+1. Install **Docker** and **PostgreSQL** on your machine.
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/E-commerce-Analytics-Pipeline.git
+   cd E-commerce-Analytics-Pipeline
